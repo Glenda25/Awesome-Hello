@@ -19,21 +19,28 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U2C-KP-kXt">
                                 <rect key="frame" x="10" y="57" width="355" height="711"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87L-NS-8yx">
-                                        <rect key="frame" x="156" y="34" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1h4-ow-pY3">
-                                        <rect key="frame" x="119" y="137" width="116" height="35"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1h4-ow-pY3">
+                                        <rect key="frame" x="119.66666666666666" y="63.666666666666671" width="116" height="35"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Say &quot;Hello!&quot;"/>
+                                        <connections>
+                                            <action selector="showMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FVM-qz-KuF"/>
+                                        </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87L-NS-8yx">
+                                        <rect key="frame" x="10" y="10" width="335" height="33.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="21"/>
+                                        <color key="textColor" systemColor="systemRedColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.91492097914833703" green="1" blue="0.88137655295620687" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
+                                    <constraint firstItem="1h4-ow-pY3" firstAttribute="centerX" secondItem="87L-NS-8yx" secondAttribute="centerX" id="BCe-jC-IaZ"/>
+                                    <constraint firstItem="87L-NS-8yx" firstAttribute="leading" secondItem="U2C-KP-kXt" secondAttribute="leading" constant="10" id="Nb4-2g-LT7"/>
+                                    <constraint firstItem="87L-NS-8yx" firstAttribute="top" secondItem="U2C-KP-kXt" secondAttribute="top" constant="10" id="bnT-lL-34N"/>
                                     <constraint firstItem="1h4-ow-pY3" firstAttribute="top" secondItem="87L-NS-8yx" secondAttribute="bottom" constant="20" id="gju-g0-GIu"/>
+                                    <constraint firstAttribute="trailing" secondItem="87L-NS-8yx" secondAttribute="trailing" constant="10" id="ljn-KF-Lwx"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -46,15 +53,21 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="U2C-KP-kXt" secondAttribute="trailing" constant="10" id="x4b-Rh-u4j"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="helloLabel" destination="87L-NS-8yx" id="mia-Ed-I6H"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="4"/>
+            <point key="canvasLocation" x="136.80000000000001" y="3.6945812807881775"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
